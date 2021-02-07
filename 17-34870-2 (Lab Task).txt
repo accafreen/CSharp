@@ -27,6 +27,6 @@
             {
                sum = sum + i;
             }
-           Console.WriteLine("Sum: ", sum);
+           Console.WriteLine("Sum: %d", sum);
         }
     }
