@@ -29,3 +29,38 @@
            Console.WriteLine("Sum: " + sum);
         }
     }
+8. using System;
+   class Marks
+   {
+   	public static void Main()
+	{
+		int physics = 54, chemistry = 78, biology = 69, math = 95;
+		int sum = physics + chemistry + biology + math;
+		sum /= 5;
+		Console.WriteLine("Percentage : " + sum + "%");
+		if(sum<50)
+		{
+			Console.WriteLine("Failed);
+		}
+		elseif(sum>=50 && sum<75)
+		{
+			Console.WriteLine("C+");
+		}
+		elseif(sum>=75 && sum<79)
+		{
+			Console.WriteLine("B");
+		}
+		elseif(sum>=80 && sum<85)
+		{
+			Console.WriteLine("B+");
+		}
+		elseif(sum>=85 && sum<89)
+		{
+			Console.WriteLine("A");
+		}
+		else()
+		{
+			Console.WriteLine("A+");
+		}
+	}
+}
