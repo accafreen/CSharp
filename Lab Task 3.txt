@@ -1,0 +1,148 @@
+1. using System;
+class Student {
+    private String name;
+    private String id;
+    private String department;
+    private float cgpa;
+    public String Name {
+        get {return name;}
+        set {name = value;}
+    }
+    public String Id {
+        get {return id;}
+        set {id = value;}
+    }
+    public String Department {
+        get {return department;}
+        set {department = value;}
+    }
+    public float Cgpa {
+        get {return cgpa;}
+        set {cgpa = value;}
+    }
+    internal void ShowInfo() {
+        Console.WriteLine("Name : " + name);
+        Console.WriteLine("ID : " + id);
+        Console.WriteLine("Department : " + department);
+        Console.WriteLine("CGPA : " + cgpa);
+    }
+    static void Main() {
+        Student std1 = new Student();
+        std1.name = "X";
+        std1.id = "1";
+        std1.department = "Y";
+        std1.cgpa = 3.75f;
+        std1.ShowInfo();
+    }
+}
+2. using System;
+class Triangle {
+    private int x;
+    private int y;
+    private int z;
+    public int X {
+        get {return x;}
+        set {x = value;}
+    }
+    public int Y {
+        get {return y;}
+        set {y = value;}
+    }
+    public int Z {
+        get {return z;}
+        set {z = value;}
+    }
+    internal void TestTriangle() {
+        if(x==y && y==z && z==x) {
+            Console.WriteLine("Equilateral Triangle");
+        }
+        else if(x==y || y==z || z==x) {
+            Console.WriteLine("Isosceles Triangle");
+        }
+        else {
+            Console.WriteLine("Scalene Triangle");
+        }
+    }
+    internal void ShowInfo() {
+        Console.WriteLine("X : " + x);
+        Console.WriteLine("Y : " + y);
+        Console.WriteLine("Z : " + z);
+    }
+    static void Main() {
+        Triangle tri1 = new Triangle();
+        tri1.x = 10;
+        tri1.y = 10;
+        tri1.z = 20;
+        tri1.ShowInfo();
+        Console.WriteLine("Triangle : ");
+        tri1.TestTriangle();
+    }
+}
+3. using System;
+class Account {
+    private String accName;
+    private String acid;
+    private int balance;
+    public String AccName {
+        get {return accName;}
+        set {accName = value;}
+    }
+    public String AcId {
+        get {return acid;}
+        set {acid = value;}
+    }
+    public int Balance {
+        get {return balance;}
+        set {balance = value;}
+    }
+    internal void Deposit(int amount) {
+        balance = balance + amount;
+    }
+    internal void Withdraw(int amount) {
+        balance = balance - amount;
+    }
+    internal void ShowInfo() {
+        Console.WriteLine("Account Name : " + accName);
+        Console.WriteLine("Account ID : " + acid);
+        Console.WriteLine("Balance : " + balance);
+    }
+    static void Main() {
+        Account acc1 = new Account();
+        acc1.accName = "X";
+        acc1.acid = "1";
+        acc1.balance = 10000;
+        acc1.Deposit(1000);
+        acc1.Withdraw(500);
+        acc1.ShowInfo();
+    }
+}
+4. using System;
+class Course {
+    private String courseName;
+    private String courseCode;
+    private int courseCredit;
+    public String CourseName {
+        get {return courseName;}
+        set {courseName = value;}
+    }
+    public String CourseCode {
+        get {return courseCode;}
+        set {courseCode = value;}
+    }
+    public int CourseCredit {
+        get {return courseCredit;}
+        set {courseCredit = value;}
+    }
+    internal void ShowInfo() {
+        Console.WriteLine("Course Name : " + courseName);
+        Console.WriteLine("Course Code : " + courseCode);
+        Console.WriteLine("Course Credit : " + courseCredit);
+    }
+    static void Main() {
+        Course cou1 = new Course();
+        cou1.courseName = "X";
+        cou1.courseCode = "1";
+        cou1.courseCredit = 3;
+        cou1.ShowInfo();
+    }
+}
