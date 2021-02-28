@@ -1,0 +1,37 @@
+using System;
+class Student {
+    private string name;
+    private string id;
+    private string dept;
+    private double cgpa;
+    public string Name {
+        get { return name; }
+        set { name = value; }
+    }
+    public string ID {
+        get { return id; }
+        set { id = value; }
+    }
+    public string Dept {
+        get { return dept; }
+        set { dept = value; }
+    } 
+    public double CGPA {
+        get { return cgpa; }
+        set { cgpa = value; }
+    }
+    public void ShowInfo() {
+        Console.WriteLine("Name: " + name);
+        Console.WriteLine("ID: " + id);
+        Console.WriteLine("Department: " + dept);
+        Console.WriteLine("CGPA: " + cgpa);
+    }
+    static void Main() {
+        Student s1 = new Student();
+        s1.Name = "Priyanka";
+        s1.ID = "17-34870-2";
+        s1.Dept = "CSE";
+        s1.CGPA = 3.5;
+        s1.ShowInfo();
+  }
+}
