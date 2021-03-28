@@ -1,0 +1,46 @@
+interface BasicCalculatorInterface
+{
+    int sum (int x,int y);
+    int sub (int x,int y);
+    int multiplication (int x,int y);
+    int division (int x,int y);
+}
+interface ScientificCalculatorInterface
+{
+    int XtoY (int x,int y);
+}
+class Calculator : BasicCalculatorInterface,ScientificCalculatorInterface
+{
+    int sum (int x,int y)
+    {
+        Console.WriteLine("Addition: ", x+y);
+    }
+    int sub (int x,int y)
+    {
+        Console.WriteLine("Subtraction: ", x-y);
+    }
+    int multiplication (int x,int y)
+    {
+        Console.WriteLine("Multiplication: ", x*y);
+    }
+    int division (int x,int y)
+    {
+        Console.WriteLine("Division: ", x/y);
+    }
+    int XtoY (int x,int y)
+    {
+        Console.WriteLine("Scientific Calculator");
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Calculator calc1 = new Calculator();
+        calc1.sum(2,1);
+        calc1.sub(3,2);
+        calc1.multiplication(4,3);
+        calc1.division(5,4);
+        calc1.XtoY(6,5);
+    }
+}

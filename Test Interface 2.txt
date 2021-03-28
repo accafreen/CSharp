@@ -1,0 +1,35 @@
+interface BasicBankingInterface
+{
+    bool deposit (int amount);
+    bool withdraw (int amount);
+}
+class CurrentAccount : BasicBankingInterface
+{
+    bool deposit (int amount);
+    bool withdraw (int amount);
+}
+class SavingsAccount : BasicBankingInterface
+{
+    bool deposit (int amount);
+    bool withdraw (int amount);
+}
+class OverdraftAccount : BasicBankingInterface
+{
+    bool deposit (int amount);
+    bool withdraw (int amount);
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        CurrentAccount ca = new CurrentAccount();
+        SavingsAccount sa = new SavingsAccount();
+        OverdraftAccount oa = new OverdraftAccount();
+        ca.deposit(1000);
+        ca.withdraw(500);
+        sa.deposit(1100);
+        sa.withdraw(600);
+        oa.deposit(1200);
+        oa.withdraw(700);
+    }
+}
